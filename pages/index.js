@@ -45,6 +45,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>HTML</p>
             </div>
@@ -54,6 +55,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>CSS</p>
             </div>
@@ -63,6 +65,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>TailwindCSS</p>
             </div>
@@ -72,6 +75,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>JavaScript</p>
             </div>
@@ -81,6 +85,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>React</p>
             </div>
@@ -90,6 +95,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>Next.js</p>
             </div>
@@ -99,6 +105,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>Node.js</p>
             </div>
@@ -108,6 +115,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>Express.js</p>
             </div>
@@ -117,6 +125,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>Firebase</p>
             </div>
@@ -126,6 +135,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>Git</p>
             </div>
@@ -135,6 +145,7 @@ export default function Home() {
                 width={20}
                 height={20}
                 className="lg:w-8 lg:h-8"
+                alt=""
               />
               <p>Figma</p>
             </div>
