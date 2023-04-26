@@ -26,3 +26,19 @@
   transform-origin: left;
   transform: scaleX(1);
 }
+
+@keyframes flyoff{
+  from{
+    transform: translate(0, 0) rotate(0);
+  }
+  to{
+    transform: translate(500px, -500px) rotate(45deg);
+  }
+}
+
+.animate-flyoff{
+  animation-name: flyoff;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}

@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav
       className={`px-4 ${
-        !navCollapsed && "border-b"
+        navCollapsed ? "shadow-sm" : "shadow-2xl"
       } lg:border-none lg:px-36 2xl:px-80 fixed w-screen top-0 bg-white`}
     >
       <div className="flex items-center justify-between">
@@ -18,6 +18,7 @@ export default function Navbar() {
             height={10}
             className="h-16 w-16"
             alt=""
+            priority
           />
         </Link>
 
@@ -48,14 +49,8 @@ export default function Navbar() {
           <Link href="/" className="mx-1 linkButton">
             About
           </Link>
-          <Link href="/projects" className="mx-1 linkButton">
-            Projects
-          </Link>
           <Link href="/blog" className="mx-1 linkButton">
             Blog
-          </Link>
-          <Link href="connect" className="mx-1 linkButton">
-            Connect
           </Link>
         </div>
       </div>
@@ -65,9 +60,9 @@ export default function Navbar() {
           <Link href="/" onClick={() => setNavCollapsed(true)}>
             About
           </Link>
-          <Link href="/projects">Projects</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="connect">Connect</Link>
+          <Link href="/blog" onClick={() => setNavCollapsed(true)}>
+            Blog
+          </Link>
         </div>
       )}
     </nav>

@@ -9,6 +9,10 @@ module.exports = {
     extend: {
       colors: {
         customgold: "#867555",
+        customblue: "#262935",
+      },
+      width: {
+        128: "32rem",
       },
     },
   },
