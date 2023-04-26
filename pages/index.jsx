@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Project from "../components/projectCard";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 export default function Home() {
   return (
@@ -22,19 +23,42 @@ export default function Home() {
             height={50}
             className="w-24 h-24 lg:w-32 lg:h-32 lg:mr-4 ease-in-out duration-150 hover:scale-105 hover:rotate-2"
           />
+
           <div className="flex flex-col items-start">
             <h1 className="text-4xl font-medium">Nikola Marić</h1>
-            <h2 className="text-2xl text-customgold">Full-Stack Web Dev👨‍💻</h2>
+            <h2 className="text-2xl text-customgold">Full-Stack Web Dev</h2>
+          </div>
+
+          <div className="flex flex-col ml-2">
+            <a href="https://github.com/nikolamaric00">
+              <AiFillGithub className="w-8 h-8 fill-customgold" />
+            </a>
+            <a href="https://www.linkedin.com/in/nikola-mari%C4%87-b01a05217/">
+              <AiFillLinkedin className="w-8 h-8" />
+            </a>
           </div>
         </div>
 
         {/* Description */}
         <p className="text-lg lg:text-2xl my-4 px-2">
-          I have always been deeply passionate for problem-solving and exploring
-          new technology. I am driven to constantly expand my skillset and
-          knowledge, as I believe that this is crucial for staying ahead in this
-          fast-paced and ever-evolving industry.
+          Problem-solving and creativity is what excites me. Don't hesitate to
+          reach out if you want to turn your awesome idea into reality or just
+          say hi.
         </p>
+
+        {/* Projects section */}
+        <h2 className="text-2xl text-customgold">{"<projects>"}</h2>
+        <div className="w-full px-8">
+          <Project
+            img={"/screenshot.webp"}
+            name="Trading app"
+            description="A stock and crypto trading platform I was hired to build. I was responsible for UI/UX, bulding the frontend and part of the backend."
+            stack="React TailwindCSS Node Express MongoDB"
+            code=""
+            link=""
+          />
+        </div>
+        <h2 className="text-2xl text-customgold">{"</projects>"}</h2>
 
         {/* Skills section */}
         <div className="my-4">
@@ -55,20 +79,6 @@ export default function Home() {
           </ul>
           <h2 className="text-2xl text-customgold">{"</skills>"}</h2>
         </div>
-
-        {/* Projects section */}
-        <h2 className="text-2xl text-customgold">{"<projects>"}</h2>
-        <div className="w-full px-8">
-          <Project
-            img={"/screenshot.webp"}
-            name="Trading app"
-            description="A stock and crypto trading platform I was hired to build. I was responsible for UI/UX, bulding the frontend and part of the backend."
-            stack="React TailwindCSS Node Express MongoDB"
-            code=""
-            link=""
-          />
-        </div>
-        <h2 className="text-2xl text-customgold">{"</projects>"}</h2>
       </main>
     </>
   );

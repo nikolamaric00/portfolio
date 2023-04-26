@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import { CgSpinner } from "react-icons/cg";
 import { GoMail } from "react-icons/go";
-import { GrClose } from "react-icons/gr";
+import { IoCloseOutline } from "react-icons/io5";
 
 export default function Contact() {
   const [formCollapsed, setFormCollapsed] = useState(true);
@@ -69,8 +69,8 @@ export default function Contact() {
       <div className="fixed bottom-4 right-4 left-4 md:w-128 md:left-auto rounded-xl bg-white shadow-md">
         {!formCollapsed && (
           <div className="flex flex-col p-2">
-            <GrClose
-              className="self-end cursor-pointer w-6 h-6"
+            <IoCloseOutline
+              className="self-end cursor-pointer w-10 h-10"
               onClick={() => setFormCollapsed(true)}
               alt="Close contact form window."
             />
