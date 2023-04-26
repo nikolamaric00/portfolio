@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IoCloseOutline, IoMenuOutline } from "react-icons/io5";
 
 export default function Navbar() {
   const [navCollapsed, setNavCollapsed] = useState(true);
@@ -24,24 +25,18 @@ export default function Navbar() {
 
         {/* menu icon */}
         {navCollapsed && (
-          <Image
+          <IoMenuOutline
             className="h-10 w-10 lg:hidden"
             onClick={() => setNavCollapsed(false)}
             alt=""
-            width={10}
-            height={10}
-            src="/menu.svg"
           />
         )}
         {/* close menu icon */}
         {!navCollapsed && (
-          <Image
+          <IoCloseOutline
             className="h-10 w-10 lg:hidden"
             onClick={() => setNavCollapsed(true)}
-            src="/close.svg"
             alt=""
-            height={10}
-            width={10}
           />
         )}
         {/* desktop menu */}

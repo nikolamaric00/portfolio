@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Project from "../components/projectCard";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="min-h-screen flex flex-col pt-16 px-2 lg:px-36 2xl:px-80 ">
+      <main className="min-h-screen flex flex-col py-16 px-2 lg:px-36 2xl:px-80 ">
         {/* Portrait and headers */}
         <div className="flex items-center justify-between lg:justify-start my-4 ">
           <Image
@@ -37,7 +38,7 @@ export default function Home() {
 
         {/* Skills section */}
         <div className="my-4">
-          <h2 className="text-2xl">{"<skills>"}</h2>
+          <h2 className="text-2xl text-customgold">{"<skills>"}</h2>
           <ul className="px-8">
             <li>HTML</li>
             <li>CSS</li>
@@ -52,15 +53,22 @@ export default function Home() {
             <li>Firebase</li>
             <li>Figma</li>
           </ul>
-          <h2 className="text-2xl">{"</skills>"}</h2>
+          <h2 className="text-2xl text-customgold">{"</skills>"}</h2>
         </div>
 
         {/* Projects section */}
-
-        <div className="my-4">
-          <h2 className="text-2xl">{"<projects>"}</h2>
-          <h2 className="text-2xl">{"</projects>"}</h2>
+        <h2 className="text-2xl text-customgold">{"<projects>"}</h2>
+        <div className="w-full px-8">
+          <Project
+            img={"/screenshot.webp"}
+            name="Trading app"
+            description="A stock and crypto trading platform I was hired to build. I was responsible for UI/UX, bulding the frontend and part of the backend."
+            stack="React TailwindCSS Node Express MongoDB"
+            code=""
+            link=""
+          />
         </div>
+        <h2 className="text-2xl text-customgold">{"</projects>"}</h2>
       </main>
     </>
   );

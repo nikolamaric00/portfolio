@@ -4,7 +4,7 @@ import Contact from "./contact";
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "500"],
+  weight: ["300", "400", "500"],
 });
 
 export default function Layout({ children }) {

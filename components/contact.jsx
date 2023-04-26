@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { useState } from "react";
-import Spinner from "./Spinner";
+import { FaPaperPlane } from "react-icons/fa";
+import { CgSpinner } from "react-icons/cg";
+import { GoMail } from "react-icons/go";
+import { GrClose } from "react-icons/gr";
 
 export default function Contact() {
   const [formCollapsed, setFormCollapsed] = useState(true);
@@ -57,11 +60,8 @@ export default function Contact() {
   return (
     <>
       {formCollapsed && (
-        <Image
-          src="/message.svg"
-          width={50}
-          height={50}
-          className="ease-in-out duration-150 hover:scale-105 hover:-rotate-6 cursor-pointer fixed bottom-4 right-4"
+        <GoMail
+          className="w-12 h-12 xl:w-16 xl:h-16 border-2 border-customblue fill-customblue rounded-full p-2 bg-white ease-in-out duration-150 hover:scale-105 hover:fill-customgold hover:border-customgold hover:-rotate-6 cursor-pointer fixed bottom-4 right-4"
           onClick={() => setFormCollapsed(false)}
           alt="Open contact form window."
         />
@@ -69,11 +69,8 @@ export default function Contact() {
       <div className="fixed bottom-4 right-4 left-4 md:w-128 md:left-auto rounded-xl bg-white shadow-md">
         {!formCollapsed && (
           <div className="flex flex-col p-2">
-            <Image
-              className="self-end cursor-pointer"
-              src="/close.svg"
-              width={30}
-              height={30}
+            <GrClose
+              className="self-end cursor-pointer w-6 h-6"
               onClick={() => setFormCollapsed(true)}
               alt="Close contact form window."
             />
@@ -127,25 +124,22 @@ export default function Contact() {
               </div>
               <div className="text-xl mt-6 mb-2 flex items-center">
                 <div
-                  className="mr-2 p-2 flex items-center shadow-lg rounded-lg cursor-pointer duration-150 ease-in-out hover:scale-95"
+                  className="mr-2 p-2 flex items-center shadow-lg rounded-lg cursor-pointer duration-150 ease-in-out"
                   onClick={handleSubmit}
                 >
                   <span className="mr-1">Send</span>
                   {!sent ? (
-                    <Image src="/plane.svg" height={15} width={15} alt="" />
+                    <FaPaperPlane alt="" />
                   ) : (
-                    <Image
-                      src="/planeFly.svg"
-                      height={15}
-                      width={15}
-                      className="animate-flyoff"
+                    <FaPaperPlane
+                      className="animate-flyoff fill-customgold"
                       alt=""
                     />
                   )}
                 </div>
               </div>
               {form.state === "loading" ? (
-                <Spinner />
+                <CgSpinner className="animate-spin text-3xl" />
               ) : form.state === "error" ? (
                 <div>{form.message}</div>
               ) : (
