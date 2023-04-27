@@ -46,24 +46,10 @@ export default function Home() {
           say hi.
         </p>
 
-        {/* Projects section */}
-        <h2 className="text-2xl text-customgold">{"<projects>"}</h2>
-        <div className="w-full px-8">
-          <Project
-            img={"/screenshot.webp"}
-            name="Trading app"
-            description="A stock and crypto trading platform I was hired to build. I was responsible for UI/UX, bulding the frontend and part of the backend."
-            stack="React TailwindCSS Node Express MongoDB"
-            code=""
-            link=""
-          />
-        </div>
-        <h2 className="text-2xl text-customgold">{"</projects>"}</h2>
-
         {/* Skills section */}
         <div className="my-4">
           <h2 className="text-2xl text-customgold">{"<skills>"}</h2>
-          <ul className="px-8">
+          <ul className="px-8 text-xl">
             <li>HTML</li>
             <li>CSS</li>
             <li>TailwindCSS</li>

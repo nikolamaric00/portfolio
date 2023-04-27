@@ -44,8 +44,8 @@ export default function Navbar() {
           <Link href="/" className="mx-1 linkButton">
             About
           </Link>
-          <Link href="/blog" className="mx-1 linkButton">
-            Blog
+          <Link href="/projects" className="mx-1 linkButton">
+            Projects
           </Link>
         </div>
       </div>
